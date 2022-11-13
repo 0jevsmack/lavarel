@@ -1,0 +1,16 @@
+php_version: 8.1
+username: admin
+vhost_name: myapp
+server_document_root: "/var/www/html"
+
+
+
+# Variables for Role Certbot certs.
+certbot_create_if_missing: false
+certbot_create_method: standalone
+
+certbot_create_standalone_stop_services:
+  - apache2
+
+apache_vhosts:
+ - {servername: "3.84.101.163", serveralias: "rogela.me", documentroot: "/var/www/html/myapp/public"}
